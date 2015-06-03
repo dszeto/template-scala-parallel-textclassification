@@ -4,7 +4,7 @@
 		module="org-template-textclassification$sources_javadoc_2.10"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20150520230823"
+		publication="20150529201102"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
@@ -24,7 +24,7 @@
 	<publications>
 	</publications>
 	<dependencies>
-		<dependency org="org.scala-lang" name="scala-library" rev="2.10.4" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);provided->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile);scala-tool->default(compile)" info.apiURL="http://www.scala-lang.org/api/2.10.4/">
+		<dependency org="org.scala-lang" name="scala-library" rev="2.10.4" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);runtime-internal->default(compile);scala-tool->default(compile)" info.apiURL="http://www.scala-lang.org/api/2.10.4/">
 			<artifact name="scala-library" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 			<artifact name="scala-library" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
@@ -44,17 +44,29 @@
 			<artifact name="jwnl" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 			<artifact name="jwnl" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
-		<dependency org="io.prediction" name="core_2.10" rev="0.9.2" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
+		<dependency org="io.prediction" name="core_2.10" rev="0.9.4-SNAPSHOT" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
 			<artifact name="core_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 			<artifact name="core_2.10" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
-		<dependency org="io.prediction" name="data_2.10" rev="0.9.2" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
+		<dependency org="org.scala-lang" name="scala-library" rev="2.10.5" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)" info.apiURL="http://www.scala-lang.org/api/2.10.5/">
+			<artifact name="scala-library" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="scala-library" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="io.prediction" name="data_2.10" rev="0.9.4-SNAPSHOT" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
 			<artifact name="data_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 			<artifact name="data_2.10" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
-		<dependency org="io.prediction" name="common_2.10" rev="0.9.2" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
+		<dependency org="io.prediction" name="common_2.10" rev="0.9.4-SNAPSHOT" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
 			<artifact name="common_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 			<artifact name="common_2.10" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="com.github.nscala-time" name="nscala-time_2.10" rev="2.0.0" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
+			<artifact name="nscala-time_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="nscala-time_2.10" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="joda-time" name="joda-time" rev="2.7" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
+			<artifact name="joda-time" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="joda-time" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
 		<dependency org="commons-codec" name="commons-codec" rev="1.9" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
 			<artifact name="commons-codec" type="src" ext="jar" conf="sources" e:classifier="sources"/>
@@ -99,6 +111,9 @@
 		<dependency org="com.chuusai" name="shapeless_2.10" rev="1.2.4" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
 			<artifact name="shapeless_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 			<artifact name="shapeless_2.10" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="mysql" name="mysql-connector-java" rev="5.1.35" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
+			<artifact name="mysql-connector-java" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
 		<dependency org="org.apache.hadoop" name="hadoop-common" rev="2.5.0" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
 			<artifact name="hadoop-common" type="src" ext="jar" conf="sources" e:classifier="sources"/>
@@ -255,6 +270,13 @@
 		<dependency org="com.jcraft" name="jsch" rev="0.1.42" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
 			<artifact name="jsch" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
+		<dependency org="commons-el" name="commons-el" rev="1.0" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
+			<artifact name="commons-el" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="commons-el" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="javax.servlet.jsp" name="jsp-api" rev="2.1" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
+			<artifact name="jsp-api" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
 		<dependency org="org.apache.hbase" name="hbase-common" rev="0.98.5-hadoop2" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
 			<artifact name="hbase-common" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 			<artifact name="hbase-common" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
@@ -309,6 +331,10 @@
 		<dependency org="org.jamon" name="jamon-runtime" rev="2.3.1" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
 			<artifact name="jamon-runtime" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 			<artifact name="jamon-runtime" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="org.apache.hbase" name="hbase-prefix-tree" rev="0.98.5-hadoop2" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
+			<artifact name="hbase-prefix-tree" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="hbase-prefix-tree" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
 		<dependency org="org.apache.zookeeper" name="zookeeper" rev="3.4.6" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
 			<artifact name="zookeeper" type="src" ext="jar" conf="sources" e:classifier="sources"/>
@@ -412,37 +438,45 @@
 			<artifact name="json4s-ext_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 			<artifact name="json4s-ext_2.10" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
-		<dependency org="joda-time" name="joda-time" rev="2.3" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
-			<artifact name="joda-time" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-			<artifact name="joda-time" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		<dependency org="org.postgresql" name="postgresql" rev="9.4-1201-jdbc41" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
+			<artifact name="postgresql" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="postgresql" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
-		<dependency org="org.joda" name="joda-convert" rev="1.6" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
+		<dependency org="org.scalikejdbc" name="scalikejdbc_2.10" rev="2.2.6" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
+			<artifact name="scalikejdbc_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="scalikejdbc_2.10" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="org.scalikejdbc" name="scalikejdbc-core_2.10" rev="2.2.6" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
+			<artifact name="scalikejdbc-core_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="scalikejdbc-core_2.10" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="commons-dbcp" name="commons-dbcp" rev="1.4" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
+			<artifact name="commons-dbcp" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="commons-dbcp" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="commons-pool" name="commons-pool" rev="1.5.4" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
+			<artifact name="commons-pool" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="commons-pool" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="org.slf4j" name="slf4j-api" rev="1.7.12" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
+			<artifact name="slf4j-api" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="slf4j-api" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="org.joda" name="joda-convert" rev="1.7" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
 			<artifact name="joda-convert" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 			<artifact name="joda-convert" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
-		<dependency org="org.mongodb" name="casbah-commons_2.10" rev="2.7.2" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
-			<artifact name="casbah-commons_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-			<artifact name="casbah-commons_2.10" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		<dependency org="org.scalikejdbc" name="scalikejdbc-interpolation_2.10" rev="2.2.6" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
+			<artifact name="scalikejdbc-interpolation_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="scalikejdbc-interpolation_2.10" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
-		<dependency org="com.github.nscala-time" name="nscala-time_2.10" rev="1.0.0" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
-			<artifact name="nscala-time_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-			<artifact name="nscala-time_2.10" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		<dependency org="org.scalikejdbc" name="scalikejdbc-interpolation-macro_2.10" rev="2.2.6" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
+			<artifact name="scalikejdbc-interpolation-macro_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="scalikejdbc-interpolation-macro_2.10" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
-		<dependency org="org.mongodb" name="mongo-java-driver" rev="2.12.2" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
-			<artifact name="mongo-java-driver" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-			<artifact name="mongo-java-driver" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
-		</dependency>
-		<dependency org="org.mongodb" name="casbah-core_2.10" rev="2.7.2" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
-			<artifact name="casbah-core_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-			<artifact name="casbah-core_2.10" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
-		</dependency>
-		<dependency org="org.mongodb" name="casbah-query_2.10" rev="2.7.2" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
-			<artifact name="casbah-query_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-			<artifact name="casbah-query_2.10" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
-		</dependency>
-		<dependency org="org.mongodb" name="casbah-gridfs_2.10" rev="2.7.2" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
-			<artifact name="casbah-gridfs_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-			<artifact name="casbah-gridfs_2.10" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		<dependency org="org.scala-lang" name="scala-reflect" rev="2.10.5" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)" info.apiURL="http://www.scala-lang.org/api/2.10.5/">
+			<artifact name="scala-reflect" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="scala-reflect" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
 		<dependency org="org.spark-project.akka" name="akka-actor_2.10" rev="2.3.4-spark" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
 			<artifact name="akka-actor_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
@@ -451,21 +485,6 @@
 		<dependency org="com.typesafe" name="config" rev="1.2.1" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
 			<artifact name="config" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 			<artifact name="config" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
-		</dependency>
-		<dependency org="org.mortbay.jetty" name="servlet-api" rev="2.5-20081211" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
-			<artifact name="servlet-api" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-			<artifact name="servlet-api" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
-		</dependency>
-		<dependency org="commons-el" name="commons-el" rev="1.0" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
-			<artifact name="commons-el" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-			<artifact name="commons-el" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
-		</dependency>
-		<dependency org="javax.servlet.jsp" name="jsp-api" rev="2.1" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
-			<artifact name="jsp-api" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-		</dependency>
-		<dependency org="org.apache.hbase" name="hbase-prefix-tree" rev="0.98.5-hadoop2" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
-			<artifact name="hbase-prefix-tree" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-			<artifact name="hbase-prefix-tree" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
 		<dependency org="com.typesafe.play" name="twirl-api_2.10" rev="1.0.3" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
 			<artifact name="twirl-api_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
@@ -479,7 +498,7 @@
 			<artifact name="gson" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 			<artifact name="gson" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
-		<dependency org="com.google.guava" name="guava" rev="18.0" transitive="false" conf="provided->default(compile)">
+		<dependency org="com.google.guava" name="guava" rev="18.0" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
 			<artifact name="guava" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 			<artifact name="guava" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
@@ -633,10 +652,6 @@
 			<artifact name="commons-lang3" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 			<artifact name="commons-lang3" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
-		<dependency org="org.slf4j" name="slf4j-api" rev="1.7.10" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
-			<artifact name="slf4j-api" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-			<artifact name="slf4j-api" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
-		</dependency>
 		<dependency org="org.slf4j" name="jul-to-slf4j" rev="1.7.10" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
 			<artifact name="jul-to-slf4j" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 			<artifact name="jul-to-slf4j" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
@@ -724,10 +739,6 @@
 		<dependency org="com.fasterxml.jackson.module" name="jackson-module-scala_2.10" rev="2.4.4" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
 			<artifact name="jackson-module-scala_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 			<artifact name="jackson-module-scala_2.10" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
-		</dependency>
-		<dependency org="org.scala-lang" name="scala-reflect" rev="2.10.4" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile);scala-tool->default(compile)" info.apiURL="http://www.scala-lang.org/api/2.10.4/">
-			<artifact name="scala-reflect" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-			<artifact name="scala-reflect" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
 		<dependency org="com.fasterxml.jackson.core" name="jackson-annotations" rev="2.4.4" transitive="false" conf="provided->default(compile);compile-internal->default(compile);test-internal->default(compile)">
 			<artifact name="jackson-annotations" type="src" ext="jar" conf="sources" e:classifier="sources"/>
@@ -850,9 +861,9 @@
 			<artifact name="spire-macros_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 			<artifact name="spire-macros_2.10" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
-		<dependency org="com.google.guava" name="guava" rev="14.0.1" transitive="false" conf="compile-internal->default(compile);test-internal->default(compile)">
-			<artifact name="guava" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-			<artifact name="guava" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		<dependency org="org.scala-lang" name="scala-reflect" rev="2.10.4" transitive="false" conf="scala-tool->default(compile)" info.apiURL="http://www.scala-lang.org/api/2.10.4/">
+			<artifact name="scala-reflect" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="scala-reflect" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
 		<dependency org="org.scala-lang" name="jline" rev="2.10.4" transitive="false" conf="scala-tool->default(compile)">
 			<artifact name="jline" type="src" ext="jar" conf="sources" e:classifier="sources"/>

@@ -4,7 +4,7 @@
 		module="org-template-textclassification_2.10"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20150528004925"
+		publication="20150529201039"
 	>
 		<description>
 		org.template.textclassification
@@ -27,7 +27,7 @@
 	</configurations>
 	<publications>
 		<artifact name="org-template-textclassification_2.10" type="pom" ext="pom" conf="pom"/>
-		<artifact name="org-template-textclassification_2.10" type="jar" ext="jar" conf="optional" e:classifier="download"/>
+		<artifact name="org-template-textclassification_2.10" type="jar" ext="jar" conf="optional" e:classifier="download, resolveClassifiers, resolveSbtClassifiers"/>
 	</publications>
 	<dependencies>
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.10.4" conf="scala-tool->default,optional(default)"/>
