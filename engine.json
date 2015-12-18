@@ -9,7 +9,7 @@
   },
   "preparator": {
     "params": {
-      "nGram": 2,
+      "nGram": 1,
       "numFeatures": 15000
     }
   },
