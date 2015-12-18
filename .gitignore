@@ -3,7 +3,6 @@
 target/
 project/project/
 project/target/
-manifest.json
 best.json
 pio.log
 pio.sbt
