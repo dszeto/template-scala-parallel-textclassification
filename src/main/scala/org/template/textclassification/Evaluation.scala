@@ -32,7 +32,21 @@ object AccuracyEvaluation extends Evaluation {
 
 
 // 3. Set your engine parameters for evaluation procedure.
-object EngineParamsList extends EngineParamsGenerator {
+object EngineParamsListX extends EngineParamsGenerator {
+
+  // Set data source and preparator parameters.
+  private[this] val baseEP = EngineParams(
+    dataSourceParams = DataSourceParams(appName = "MyTextApp", evalK = Some(3)),
+    preparatorParams = PreparatorParams(nGram = 2)
+  )
+
+  // Set the algorithm params for which we will assess an accuracy score.
+  engineParamsList = Seq(
+    baseEP.copy(algorithmParamsList = Seq(("nb", NBAlgorithmParams(0.25))))
+  )
+}
+
+object EngineParamsListY extends EngineParamsGenerator {
 
   // Set data source and preparator parameters.
   private[this] val baseEP = EngineParams(
