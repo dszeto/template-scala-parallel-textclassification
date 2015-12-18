@@ -1,4 +1,4 @@
-#!/bin/bash -ex
+#!/bin/bash
 
 PIO_HOME=/Users/dszeto/demo/PredictionIO-0.9.5
 LAMBDA_HOME=/Users/dszeto/rcx/advance/backend/target/universal/stage
