@@ -10,13 +10,13 @@ if [ ! -z "$2" ]; then
 fi
 if [ ! -z "$ENGINE_INSTANCE_ID" ]; then
   $PIO_HOME/bin/pio build
-  BUILD_ID=DONTKILL $PIO_HOME/bin/pio deploy --engine-instance-id $ENGINE_INSTANCE_ID &
-  sleep 5
+  BUILD_ID=DONTKILL $PIO_HOME/bin/pio deploy --port $PORT --engine-instance-id $ENGINE_INSTANCE_ID &
+  sleep 10
   disown
 else
   $PIO_HOME/bin/pio build
   $PIO_HOME/bin/pio train -- --driver-memory 4g
   BUILD_ID=DONTKILL $PIO_HOME/bin/pio deploy --port $PORT &
-  sleep 5
+  sleep 10
   disown
 fi
